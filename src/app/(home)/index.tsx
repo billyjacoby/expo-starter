@@ -1,12 +1,12 @@
-import { Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text } from 'react-native';
+
+import { BaseScreenNoScroll } from '~/src/components/BaseScreen';
 
 export default function HomeScreen() {
+  console.log('HomeScreen');
   return (
-    <View className="flex-1 bg-blue-500">
-      <SafeAreaView className="flex-1 bg-blue-500">
-        <Text>INDEX</Text>
-      </SafeAreaView>
-    </View>
+    <BaseScreenNoScroll>
+      <Text className="text-center font-fira-regular text-4xl text-red-500">INDEX</Text>
+    </BaseScreenNoScroll>
   );
 }

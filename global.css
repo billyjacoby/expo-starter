@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 234 34% 12%;
+    --background-surface: 233 30% 22%;
+    --foreground: 0 0% 100%;
+    --foreground-secondary: 234 10% 60%;
+    --muted: 234 27% 22%;
+    --accent: 213 100% 81%;
+    --accent-secondary: 205 100% 25% 1;
+    --error: 3 71% 41%;
+    --positive: 147 49% 58%;
+    --negative: 0 100% 70%;
+    --cta-accent: 213 79% 62% 1;
+  }
+}

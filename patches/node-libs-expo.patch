@@ -1,0 +1,24 @@
+diff --git a/globals.js b/globals.js
+index 1e55e5b64de4fe29b8835745de4b9abde0500232..1e9f5ea5defc1405848eeb7cb24c6f95badf26b1 100644
+--- a/globals.js
++++ b/globals.js
+@@ -2,14 +2,14 @@ global.Buffer = require('buffer').Buffer;
+ global.process = require('process');
+ 
+ // Needed so that 'stream-http' chooses the right default protocol.
+-global.location = {
+-  protocol: 'file:',
+-  href: ''
+-};
++// global.location = {
++//   protocol: 'file:',
++//   href: ''
++// };
+ 
+ // Some modules expect userAgent to be a string
+ global.navigator.userAgent = 'React Native';
+ 
+-const { encode, decode } = require("base-64");
++const { encode, decode } = require('base-64');
+ global.atob = decode;
+ global.btoa = encode;

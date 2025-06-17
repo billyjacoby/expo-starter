@@ -1,0 +1,13 @@
+diff --git a/src/components/AnimatedDigit.tsx b/src/components/AnimatedDigit.tsx
+index de112d49936bbe76bf59b7f649e9a5ac4ca684f7..9cc05e151a98fa54a34e4dcd91c057acc23310ec 100644
+--- a/src/components/AnimatedDigit.tsx
++++ b/src/components/AnimatedDigit.tsx
+@@ -103,7 +103,7 @@ export const AnimatedDigit: React.FC<AnimatedDigitProps> = ({
+   numberTextProps,
+   ...rest
+ }) => {
+-  const isNumeric = !isNaN(Number(value));
++  const isNumeric = value.trim() !== '' && !isNaN(Number(value));
+   const animatedValue = useSharedValue(isNumeric ? Number(value) : 0);
+   const animatedStyle = useAnimatedStyle(
+     () => ({

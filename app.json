@@ -1,49 +1,9 @@
 {
   "expo": {
-    "name": "expo-starter",
-    "slug": "expo-starter",
-    "version": "1.0.0",
-    "scheme": "expo-starter",
-    "newArchEnabled": true,
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-dev-client",
-        {
-          "launchMode": "most-recent"
-        }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true,
-      "tsconfigPaths": true
-    },
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.billyjacoby.starter"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.billyjacoby.starter"
+    "extra": {
+      "bugsnag": {
+        "apiKey": "cdfe39b909345b8b1fbfb56a44a326ee"
+      }
     }
   }
 }
