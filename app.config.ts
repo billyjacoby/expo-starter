@@ -1,0 +1,43 @@
+import type { ConfigContext, ExpoConfig } from 'expo/config';
+
+const config = (options: ConfigContext): ExpoConfig => {
+  return {
+    ...options.config,
+    name: "Billy's Expo Starter",
+    slug: 'billys-expo-starter',
+    version: '1.0.0',
+    scheme: 'billys-expo-starter',
+    web: {
+      bundler: 'metro',
+      output: 'static',
+      favicon: './assets/favicon.png',
+    },
+    plugins: ['expo-router', 'expo-web-browser'],
+    experiments: {
+      typedRoutes: true,
+      tsconfigPaths: true,
+    },
+    orientation: 'portrait',
+    icon: './assets/icon.png',
+    userInterfaceStyle: 'light',
+    splash: {
+      image: './assets/splash.png',
+      resizeMode: 'contain',
+      backgroundColor: '#ffffff',
+    },
+    assetBundlePatterns: ['**/*'],
+    ios: {
+      supportsTablet: true,
+      bundleIdentifier: 'com.billyjacoby.expo-starter',
+    },
+    android: {
+      adaptiveIcon: {
+        foregroundImage: './assets/adaptive-icon.png',
+        backgroundColor: '#ffffff',
+      },
+      package: 'com.billyjacoby.expostarter',
+    },
+  };
+};
+
+export default config;
