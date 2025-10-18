@@ -8,8 +8,10 @@
 		"start": "expo start",
 		"prebuild": "expo prebuild",
 		"lint": "biome check",
-		"format": "biome format",
-		"web": "expo start --web"
+		"lint:fix": "biome check --write",
+		"run-ci": "biome ci",
+		"web": "expo start --web",
+		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@expo/vector-icons": "^15.0.2",
