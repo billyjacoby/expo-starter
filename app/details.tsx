@@ -10,7 +10,10 @@ export default function Details() {
     <>
       <Stack.Screen options={{ title: 'Details' }} />
       <Container>
-        <ScreenContent path="screens/details.tsx" title={`Showing details for user ${name}`} />
+        <ScreenContent
+          path="screens/details.tsx"
+          title={`Showing details for user ${name}`}
+        />
       </Container>
     </>
   );

@@ -1,0 +1,116 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": {
+						"groups": [
+							{
+								"type": false,
+								"source": ["react"]
+							},
+							{
+								"type": true,
+								"source": ["react"]
+							},
+							{
+								"type": false,
+								"source": ["react-native", "@tanstack/react-query"]
+							},
+							{
+								"type": true,
+								"source": ["react-native", "@tanstack/react-query"]
+							},
+							":BLANK_LINE:",
+							{
+								"type": false,
+								"source": [
+									":PACKAGE:",
+									"!react",
+									"!react-native",
+									"!react-native/**"
+								]
+							},
+							{
+								"type": true,
+								"source": [
+									":PACKAGE:",
+									"!react",
+									"!react-native",
+									"!react-native/**"
+								]
+							},
+							":BLANK_LINE:",
+							{ "type": false, "source": ["@/**"] },
+							{ "type": true, "source": ["@/**"] }
+						]
+					}
+				}
+			}
+		}
+	},
+	"files": {
+		"includes": [
+			"**",
+			"!shim.js",
+			"!ios",
+			"!android",
+			"!src/data",
+			"!src/json/**/*.json",
+			"!**/.expo",
+			"!forks",
+			"!types/helix-server",
+			"!scripts",
+			"!google-services.json",
+			"!google-services-dev.json"
+		]
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"indentStyle": "space",
+			"indentWidth": 2
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"useExhaustiveDependencies": { "level": "warn", "fix": "none" },
+				"noUnusedImports": { "level": "warn", "fix": "safe" },
+				"noUnusedVariables": { "level": "error", "fix": "none" }
+			},
+			"suspicious": {
+				"noExplicitAny": { "level": "warn" },
+				"noUnknownAtRules": { "level": "warn" },
+				"noConsole": {
+					"level": "error",
+					"fix": "none",
+					"options": { "allow": ["log"] }
+				}
+			},
+			"style": {
+				"noNonNullAssertion": { "level": "warn", "fix": "none" },
+				"noParameterAssign": "error",
+				"useAsConstAssertion": "error",
+				"useDefaultParameterLast": "error",
+				"useEnumInitializers": "error",
+				"useSelfClosingElements": "error",
+				"useSingleVarDeclarator": "error",
+				"noUnusedTemplateLiteral": "error",
+				"useNumberNamespace": "error",
+				"noInferrableTypes": "error",
+				"noUselessElse": "error"
+			},
+			"nursery": {
+				"useSortedClasses": { "fix": "safe", "level": "warn" }
+			},
+			"a11y": {
+				"useSemanticElements": "off"
+			}
+		}
+	}
+}
