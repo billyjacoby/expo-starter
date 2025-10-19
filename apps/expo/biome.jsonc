@@ -1,0 +1,18 @@
+{
+	"root": false,
+	"extends": "//",
+	"files": {
+		"includes": [
+			"**",
+			"!ios",
+			"!android",
+			"!src/data",
+			"!src/json/**/*.json",
+			"!**/.expo",
+			"!forks",
+			"!scripts",
+			"!google-services.json",
+			"!google-services-dev.json"
+		]
+	}
+}
