@@ -1,11 +1,10 @@
-import { Text } from 'react-native';
-
 import { BaseScreen } from '~/components/base/BaseScreen';
+import { ChatInterface } from '~/components/ChatInterface';
 
 export default function TabsAccount() {
   return (
-    <BaseScreen>
-      <Text>Account</Text>
+    <BaseScreen className="p-0">
+      <ChatInterface />
     </BaseScreen>
   );
 }

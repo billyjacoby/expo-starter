@@ -1,3 +1,6 @@
+// Import polyfills FIRST before any other imports
+import './polyfills';
+
 import { registerRootComponent } from 'expo';
 import { ExpoRoot } from 'expo-router';
 
