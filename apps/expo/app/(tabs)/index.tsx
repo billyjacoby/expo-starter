@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { ActivityIndicator, Text, View } from 'react-native';
 
 import { BaseScreen } from '~/components/base/BaseScreen';
+import DOMComponent from '~/components/dom-component';
 import { useApiData } from '~/hooks/query/useApiData';
 
 export default function TabsHome() {
@@ -21,7 +22,8 @@ export default function TabsHome() {
     }
 
     return (
-      <View>
+      <View className="border border-blue-500">
+        <DOMComponent name="Billy" />
         <Text>Home: {data.results.length} results</Text>
         {data.results.map((result: { name: string }) => (
           <Text key={result.name}>{result.name}</Text>
