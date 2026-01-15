@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { ActivityIndicator, Text } from 'react-native';
+import { ActivityIndicator, Text, View } from 'react-native';
 
 import { BaseScreen } from '~/components/base/BaseScreen';
 import { useApiData } from '~/hooks/query/useApiData';
@@ -20,7 +20,14 @@ export default function TabsHome() {
       return <Text>No data</Text>;
     }
 
-    return <Text>Home: {data.results.length} results</Text>;
+    return (
+      <View>
+        <Text>Home: {data.results.length} results</Text>
+        {data.results.map((result: { name: string }) => (
+          <Text key={result.name}>{result.name}</Text>
+        ))}
+      </View>
+    );
   }, [data, isLoading, error]);
 
   return <BaseScreen>{content}</BaseScreen>;
